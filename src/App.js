@@ -11,7 +11,7 @@ import axios from "axios";
 
 const App = () => {
   const [recipesHome, setRecipesHome] = useState([]);
-  
+
   // USE BELOW WHEN USING API=============================================================================
   // const [loading, setLoading] = useState(true);
 
@@ -88,7 +88,7 @@ const App = () => {
       <Nav />
 
       {/* WELCOME MESSAGE */}
-      <div className="welcome">Search for recipes!</div>
+      <div className="welcome">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, tempora delectus. Corrupti, voluptas laborum. Molestiae velit, provident totam ad nostrum laboriosam sit, nam deserunt esse nihil obcaecati error nesciunt labore.</div>
 
       {loading ? (
         loadingPage()
