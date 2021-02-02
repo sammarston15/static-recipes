@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import "./reset.css";
 import "./App.css";
 
@@ -7,16 +7,16 @@ import Nav from "./components/nav/Nav";
 import dummyData from './dummyData';
 
 // PACKAGES
-import axios from "axios";
+// import axios from "axios";
 
 const App = () => {
-  const [recipesHome, setRecipesHome] = useState([]);
+  // const [recipesHome, setRecipesHome] = useState([]);
 
   // USE BELOW WHEN USING API=============================================================================
   // const [loading, setLoading] = useState(true);
 
   // USE BELOW WHEN TESTING===============================================================================
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
 
   
 
@@ -43,22 +43,22 @@ const App = () => {
   //     });
   // }, []);
 
-  const loadingPage = () => {
-    return (
-      <div className="loading-container">
-        <div className="loading">
-          <div className="obj"></div>
-          <div className="obj"></div>
-          <div className="obj"></div>
-          <div className="obj"></div>
-          <div className="obj"></div>
-          <div className="obj"></div>
-          <div className="obj"></div>
-          <div className="obj"></div>
-        </div>
-      </div>
-    );
-  };
+  // const loadingPage = () => {
+  //   return (
+  //     <div className="loading-container">
+  //       <div className="loading">
+  //         <div className="obj"></div>
+  //         <div className="obj"></div>
+  //         <div className="obj"></div>
+  //         <div className="obj"></div>
+  //         <div className="obj"></div>
+  //         <div className="obj"></div>
+  //         <div className="obj"></div>
+  //         <div className="obj"></div>
+  //       </div>
+  //     </div>
+  //   );
+  // };
 
   // USE THIS CODE WHEN USING API====================================================================================
   // const pageLoadRecipes = recipesHome.map((recipe, i) => {
@@ -90,9 +90,9 @@ const App = () => {
       {/* WELCOME MESSAGE */}
       <div className="welcome">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, tempora delectus. Corrupti, voluptas laborum. Molestiae velit, provident totam ad nostrum laboriosam sit, nam deserunt esse nihil obcaecati error nesciunt labore.</div>
 
-      {loading ? (
+      {/* {loading ? (
         loadingPage()
-      ) : (
+      ) : ( */}
         <div className="content-container">
           {/* USE BELOW WHEN USING API */}
           {/* {pageLoadRecipes} */}
@@ -100,7 +100,7 @@ const App = () => {
           {/* USE BELOW WHEN TESTING   */}
           {pageLoadRecipesDummy}
         </div>
-      )}
+      {/* )} */}
     </div>
   );
 };
