@@ -76,7 +76,7 @@ const App = () => {
       return (
         <div className="recipeCard" key={i}>
           <img src={recipe.strMealThumb} alt="recipe" />
-          <div className="recipeTitle">{recipe.strMeal}</div>
+          <div className="recipeTitle">{recipe.strMeal} <span>{recipe.strCategory}</span></div>
         </div>
       );
     });

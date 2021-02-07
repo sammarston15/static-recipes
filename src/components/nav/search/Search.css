@@ -27,7 +27,7 @@
 .search-icon {
     width: auto;
     height: auto;
-    background: var(--salmon);
+    background: #a8dadc;
     color: #fff;
     display: flex;
     justify-content: center;
