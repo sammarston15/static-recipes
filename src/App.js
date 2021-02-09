@@ -1,10 +1,11 @@
 // import React, { useEffect, useState } from "react";
 import "./reset.css";
 import "./App.css";
+import { Helmet } from "react-helmet";
 
 // COMPONENTS
 import Nav from "./components/nav/Nav";
-import dummyData from './dummyData';
+import dummyData from "./dummyData";
 
 // PACKAGES
 // import axios from "axios";
@@ -17,8 +18,6 @@ const App = () => {
 
   // USE BELOW WHEN TESTING===============================================================================
   // const [loading, setLoading] = useState(false);
-
-  
 
   // USE WHEN USING THE API=====================================================================================
   // useEffect(() => {
@@ -73,33 +72,54 @@ const App = () => {
 
   // USE THIS CODE WHEN TESTING===================
   const pageLoadRecipesDummy = dummyData.map((recipe, i) => {
-      return (
-        <div className="recipeCard" key={i}>
-          <img src={recipe.strMealThumb} alt="recipe" />
-          <div className="recipeTitle">{recipe.strMeal} <span>{recipe.strCategory}</span></div>
+    return (
+      <div className="recipeCard" key={i}>
+        <img src={recipe.strMealThumb} alt="recipe" />
+        <div className="recipeTitle">
+          {recipe.strMeal} <span>{recipe.strCategory}</span>
         </div>
-      );
-    });
+      </div>
+    );
+  });
 
   // console.log("recipesHome: ", recipesHome);
   // console.log("dummyData: ", dummyData);
   return (
     <div className="App">
+      {/* <Helmet>
+        <meta charSet="utf-8" />
+        <title>RecipeDigital</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+        
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z7TWF2N9QZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z7TWF2N9QZ');
+</script>
+      </Helmet> */}
       <Nav />
 
       {/* WELCOME MESSAGE */}
-      <div className="welcome">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, tempora delectus. Corrupti, voluptas laborum. Molestiae velit, provident totam ad nostrum laboriosam sit, nam deserunt esse nihil obcaecati error nesciunt labore.</div>
+      <div className="welcome">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
+        tempora delectus. Corrupti, voluptas laborum. Molestiae velit, provident
+        totam ad nostrum laboriosam sit, nam deserunt esse nihil obcaecati error
+        nesciunt labore.
+      </div>
 
       {/* {loading ? (
         loadingPage()
       ) : ( */}
-        <div className="content-container">
-          {/* USE BELOW WHEN USING API */}
-          {/* {pageLoadRecipes} */}
+      <div className="content-container">
+        {/* USE BELOW WHEN USING API */}
+        {/* {pageLoadRecipes} */}
 
-          {/* USE BELOW WHEN TESTING   */}
-          {pageLoadRecipesDummy}
-        </div>
+        {/* USE BELOW WHEN TESTING   */}
+        {pageLoadRecipesDummy}
+      </div>
       {/* )} */}
     </div>
   );
