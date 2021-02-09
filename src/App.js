@@ -1,7 +1,7 @@
 // import React, { useEffect, useState } from "react";
 import "./reset.css";
 import "./App.css";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 
 // COMPONENTS
 import Nav from "./components/nav/Nav";
