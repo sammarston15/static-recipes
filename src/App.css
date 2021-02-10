@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Giga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
 
 :root {
   /* "most popular" palette - can be found at https://coolors.co/264653-2a9d8f-e9c46a-f4a261-e76f51 */
@@ -14,12 +17,16 @@ body {
 }
 
 .App {
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  /* font-family: 'Lexend Giga', sans-serif; */
+  /* font-family: 'Lexend Mega', sans-serif; */
+  font-family: 'Open Sans', sans-serif;
   height: auto;
   width: 100vw;
   max-width: 1000px;
   margin: auto;
-  background: #b3b3b3;
+  /* background: #b3b3b3; */
+  background: #fff;
   display: flex;
   flex-direction: column;
 }
@@ -107,7 +114,8 @@ body {
 }
 
 .recipeCard {
-  background: #0091ad;
+  /* background: #0091ad; */
+  background: rgba(255, 255, 255, .5);
   border-radius: 5px;
   padding-bottom: 5px;
 
@@ -116,9 +124,16 @@ body {
   height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   font-size: 1.2em;
+  /* letter-spacing: 3px; */
+  text-transform: uppercase;
+}
+.recipeCard:hover {
+  cursor: pointer;
+  transition: 0.7s;
+  transform: translatey(-5px);
 }
 .recipeCard img {
   /* height: 90%; */
@@ -127,11 +142,115 @@ body {
 }
 .recipeTitle {
   margin: 15px 0;
+  width: 80%;
+  padding-left: 5px;  
 }
-.recipeTitle span {
+.recipeTag {
   background: grey;
   padding: 0 5px;
-  margin: 45px 0;
+  margin-bottom: 15px;
   text-transform: uppercase;
   font-size: .7em;
+  justify-self: start;
+}
+
+
+/* SWEET ALERT STYLES */
+.swal-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.swal-modal {
+  font-family: 'Open Sans', sans-serif;
+  /* border: 3px solid white; */
+}
+.swal-title {
+  margin: 0px;
+  font-size: 24px;
+  margin-bottom: 28px;
+}
+/* .swal-text {
+  background-color: #FEFAE3;
+  padding: 17px;
+  border: 1px solid #F0E1A1;
+  display: block;
+  margin: 22px;
+  text-align: center;
+  color: #61534e;
+} */
+.swal-footer {
+  background-color: rgb(245, 248, 250);
+  margin-top: 32px;
+  border-top: 1px solid #E9EEF1;
+  overflow: hidden;
+}
+/* .swal-button {
+  padding: 7px 19px;
+  border-radius: 2px;
+  background-color: #4962B3;
+  font-size: 12px;
+  border: 1px solid #3e549a;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+} */
+/* .swal-content {
+  
+} */
+
+
+.recipe-container {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 2px;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  padding: 2px;
+}
+
+.a {
+  grid-area: 1/2/2/6;
+}
+
+.c {
+  grid-area: 5/1/6/7;
+}
+
+.d{
+	grid-area: 2/1/5/7;
+  display: grid;
+  grid-gap: 5px;
+  padding: 5px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  background: grey;
+}
+
+.strIngredient1 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.strMeasure1 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.strIngredient2 {
+  grid-column: 2;
+  grid-row: 2;
+}
+.strMeasure2 {
+  grid-column: 3;
+  grid-row: 2;
+}
+.strIngredient3 {
+  grid-column: 2;
+  grid-row: 3;
+}
+.strMeasure3 {
+  grid-column: 3;
+  grid-row: 3;
 }
