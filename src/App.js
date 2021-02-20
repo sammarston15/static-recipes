@@ -62,6 +62,17 @@ const App = () => {
   };
 
   const recipeClick = (recipeFull) => {
+    const rows = /\\r+\\n+/;
+    const instructions = JSON.stringify(recipeFull.strInstructions);
+    const newInstructions = instructions.split(rows).map(i => {
+      console.log('hit i: ', i)
+      return <p className='instructions'>{i}</p>
+    });
+    // const finalInstructions = newInstructions.split(rows).map(i => {
+    //   return <div>{i}</div>
+    // })
+    console.log( "newInstructions: ", typeof newInstructions)
+
     swal({
       title: recipeFull.strMeal,
       buttons: {
@@ -69,16 +80,131 @@ const App = () => {
       },
       content: (
         <div className="recipe-container">
-          <div class="box a">ingredients</div>
-          <div class="box d">
-            <div class="box strIngredient1">{recipeFull.strIngredient1}</div>
-            <div class="box strMeasure1">{recipeFull.strMeasure1}</div>
-            <div class="box strIngredient2">{recipeFull.strIngredient2}</div>
-            <div class="box strMeasure2">{recipeFull.strMeasure2}</div>
-            <div class="box strIngredient3">{recipeFull.strIngredient3}</div>
-            <div class="box strMeasure3">{recipeFull.strMeasure3}</div>
+          <div class="a">ingredients</div>
+          <div class="d">
+            {recipeFull.strIngredient1 ? (
+              <>
+                <div class="strIngredient1">{recipeFull.strIngredient1}</div>
+                <div class="strMeasure1">{recipeFull.strMeasure1}</div>
+              </>
+            ) : null}
+            {recipeFull.strIngredient2 ? (
+              <>
+                <div class="strIngredient1">{recipeFull.strIngredient2}</div>
+                <div class="strMeasure1">{recipeFull.strMeasure2}</div>
+              </>
+            ) : null}
+            {recipeFull.strIngredient3 ? (
+              <>
+                <div class="strIngredient1">{recipeFull.strIngredient3}</div>
+                <div class="strMeasure1">{recipeFull.strMeasure3}</div>
+              </>
+            ) : null}
+            {recipeFull.strIngredient4 ? (
+              <>
+                <div class="strIngredient1">{recipeFull.strIngredient4}</div>
+                <div class="strMeasure1">{recipeFull.strMeasure4}</div>
+              </>
+            ) : null}
+            {recipeFull.strIngredient5 ? (
+              <>
+                <div class="strIngredient1">{recipeFull.strIngredient5}</div>
+                <div class="strMeasure1">{recipeFull.strMeasure5}</div>
+              </>
+            ) : null}
+            {recipeFull.strIngredient6 ? (
+              <>
+                <div class="strIngredient1">{recipeFull.strIngredient6}</div>
+                <div class="strMeasure1">{recipeFull.strMeasure6}</div>
+              </>
+            ) : null}
+            {recipeFull.strIngredient7 ? (
+              <>
+                <div class="strIngredient1">{recipeFull.strIngredient7}</div>
+                <div class="strMeasure1">{recipeFull.strMeasure7}</div>
+              </>
+            ) : null}
+            {recipeFull.strIngredient8 ? (
+              <>
+                <div class="strIngredient1">{recipeFull.strIngredient8}</div>
+                <div class="strMeasure1">{recipeFull.strMeasure8}</div>
+              </>
+            ) : null}
+            {recipeFull.strIngredient9 ? (
+              <>
+                <div class="strIngredient1">{recipeFull.strIngredient9}</div>
+                <div class="strMeasure1">{recipeFull.strMeasure9}</div>
+              </>
+            ) : null}
+            {recipeFull.strIngredient10 ? (
+              <>
+                <div class="strIngredient1">{recipeFull.strIngredient10}</div>
+                <div class="strMeasure1">{recipeFull.strMeasure10}</div>
+              </>
+            ) : null}
+            {recipeFull.strIngredient11 ? (
+              <>
+                <div class="strIngredient1">{recipeFull.strIngredient11}</div>
+                <div class="strMeasure1">{recipeFull.strMeasure11}</div>
+              </>
+            ) : null}
+            {recipeFull.strIngredient12 ? (
+              <>
+                <div class="strIngredient1">{recipeFull.strIngredient12}</div>
+                <div class="strMeasure1">{recipeFull.strMeasure12}</div>
+              </>
+            ) : null}
+            {recipeFull.strIngredient13 ? (
+              <>
+                <div class="strIngredient1">{recipeFull.strIngredient13}</div>
+                <div class="strMeasure1">{recipeFull.strMeasure13}</div>
+              </>
+            ) : null}
+            {recipeFull.strIngredient4 ? (
+              <>
+                <div class="strIngredient1">{recipeFull.strIngredient14}</div>
+                <div class="strMeasure1">{recipeFull.strMeasure14}</div>
+              </>
+            ) : null}
+            {recipeFull.strIngredient15 ? (
+              <>
+                <div class="strIngredient1">{recipeFull.strIngredient15}</div>
+                <div class="strMeasure1">{recipeFull.strMeasure15}</div>
+              </>
+            ) : null}
+            {recipeFull.strIngredient16 ? (
+              <>
+                <div class="strIngredient1">{recipeFull.strIngredient16}</div>
+                <div class="strMeasure1">{recipeFull.strMeasure16}</div>
+              </>
+            ) : null}
+            {recipeFull.strIngredient17 ? (
+              <>
+                <div class="strIngredient1">{recipeFull.strIngredient7}</div>
+                <div class="strMeasure1">{recipeFull.strMeasure17}</div>
+              </>
+            ) : null}
+            {recipeFull.strIngredient18 ? (
+              <>
+                <div class="strIngredient1">{recipeFull.strIngredient18}</div>
+                <div class="strMeasure1">{recipeFull.strMeasure18}</div>
+              </>
+            ) : null}
+            {recipeFull.strIngredient19 ? (
+              <>
+                <div class="strIngredient1">{recipeFull.strIngredient19}</div>
+                <div class="strMeasure1">{recipeFull.strMeasure19}</div>
+              </>
+            ) : null}
+            {recipeFull.strIngredient20 ? (
+              <>
+                <div class="strIngredient1">{recipeFull.strIngredient20}</div>
+                <div class="strMeasure1">{recipeFull.strMeasure20}</div>
+              </>
+            ) : null}
+            
           </div>
-          <div class="box c">{recipeFull.strInstructions}</div>
+          <div class="box c">{newInstructions}</div>
         </div>
       ),
     });
@@ -112,7 +238,7 @@ const App = () => {
   //   );
   // });
 
-  console.log("recipesHome: ", recipesHome);
+  // console.log("recipesHome: ", recipesHome[0].strInstructions);
   // console.log("dummyData: ", dummyData);
   return (
     <div className="App">
@@ -134,7 +260,7 @@ const App = () => {
 
       {/* WELCOME MESSAGE */}
       <div className="welcome">
-        *This website is currently in progress. The search bar does not work and will need to be worked next.
+        Welcome to RecipeDigital! Feel free to search for a recipe.
       </div>
 
       {loading ? (
